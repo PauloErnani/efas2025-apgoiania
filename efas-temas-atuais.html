@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temas Atuais</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo EFAS" class="logo" />
+    <div class="hamburger" onclick="document.querySelector('nav').classList.toggle('show')">
+      <div></div><div></div><div></div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      
+<div class="dropdown">
+  <a href="#" class="dropbtn">EFAS 2025 ▾</a>
+  <div class="dropdown-content">
+    <a href="efas-sobre.html">Sobre o EFAS</a>
+    <a href="efas-local.html">Local do Evento</a>
+    <a href="efas-criancas.html">Para as Crianças</a>
+    <a href="efas-temas-atuais.html">Temas Atuais</a>
+    <a href="efas-temas-especificos.html">Temas Específicos</a>
+  </div>
+</div>
+
+      <a href="programacao.html">Programação</a>
+      <a href="inscricao.html">Inscrição</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+  <main>
+    <div class="card-bloco" data-aos="fade-up">
+      <h2>Temas Atuais</h2>
+      
+        <ul>
+          <li>1. Diálogo, Internet e Relacionamento Familiar</li>
+          <li>2. Chico Xavier - Exemplo de Trabalhador Espírita</li>
+          <li>3. Namoro: Amor e não Violência (12 a 13 anos)</li>
+        </ul>
+        
+    </div>
+  </main>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 800, once: true });</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('loaded');
+      const dropdownToggle = document.querySelector('.dropbtn');
+      const dropdown = document.querySelector('.dropdown');
+      dropdownToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+      });
+      window.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
