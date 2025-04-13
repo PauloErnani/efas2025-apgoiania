@@ -321,3 +321,141 @@ main {
   max-width: 960px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
+
+.img-banner {
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.temas-banner {
+  text-align: center;
+  margin: 60px 0 40px;
+}
+
+.titulo-home {
+  font-size: 1.8rem;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.botoes-temas {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-tema {
+  background-color: #ffeb3b;
+  color: #003366;
+  padding: 14px 22px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+.btn-tema:hover {
+  background-color: #ffe000;
+}
+
+.temas-banner-overlay {
+  position: relative;
+  background-image: url('banner-jesus.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 60px 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-overlay-content {
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 16px;
+}
+
+.banner-overlay-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.botoes-temas {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-tema {
+  background-color: #ffeb3b;
+  color: #003366;
+  padding: 14px 22px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+.btn-tema:hover {
+  background-color: #ffe000;
+}
+
+.sobre-efas {
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.temas-blocos {
+  margin: 60px auto 40px;
+  text-align: center;
+}
+
+.temas-blocos h2 {
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.temas-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.tema-item {
+  max-width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.tema-item:hover {
+  transform: translateY(-5px);
+}
+
+.tema-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tema-item p {
+  font-size: 1.1rem;
+  color: #003366;
+  padding: 10px 0;
+  font-weight: bold;
+}
