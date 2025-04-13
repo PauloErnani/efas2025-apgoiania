@@ -257,3 +257,67 @@ body.loaded {
 .dropdown.open .dropdown-content {
   display: flex;
 }
+
+/* Ícones no menu */
+.dropdown-content a::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+.dropdown-content a[href*="sobre"]::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/1828/1828490.png');
+}
+.dropdown-content a[href*="local"]::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/684/684908.png');
+}
+.dropdown-content a[href*="criancas"]::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/3081/3081648.png');
+}
+.dropdown-content a[href*="atuais"]::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/3524/3524659.png');
+}
+.dropdown-content a[href*="especificos"]::before {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/1828/1828970.png');
+}
+
+/* Dropdown animado */
+.dropdown-content {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+.dropdown.open .dropdown-content {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Destaque nos títulos */
+h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 4px solid #ffeb3b;
+}
+
+body {
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: brightness(1) blur(0px);
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+  padding: 40px 30px;
+  margin: 40px auto;
+  max-width: 960px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
