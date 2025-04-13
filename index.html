@@ -76,5 +76,24 @@
       });
     });
   </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.querySelector('nav');
+    const hamburger = document.querySelector('.hamburger');
+    const links = nav.querySelectorAll('a');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('show');
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
