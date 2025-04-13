@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EFAS Aparecida - Home</title>
@@ -10,7 +12,45 @@
 <body>
   <header>
     <img src="logo.png" alt="Logo EFAS" class="logo" />
-    <nav>
+    
+<style>
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .hamburger div {
+    height: 3px;
+    width: 25px;
+    background: #003366;
+    margin: 4px 0;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      display: none;
+      width: 100%;
+    }
+    nav.show {
+      display: flex;
+    }
+  }
+</style>
+<div class="hamburger" onclick="document.querySelector('nav').classList.toggle('show')">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<nav>
       <a href="index.html">Home</a>
       
     <div class="dropdown">
@@ -35,5 +75,38 @@
     <h2>“O maior mandamento: Amarás a Deus de toda a tua alma e teu próximo como a ti mesmo”</h2>
     <a href="inscricao.html" class="btn-inscrever">INSCREVA-SE</a>
   </main>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+</script>
+
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const dropdownToggle = document.querySelector('.dropbtn');
+    const dropdown = document.querySelector('.dropdown');
+
+    dropdownToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      dropdown.classList.toggle('open');
+    });
+
+    // Fecha o menu ao clicar fora
+    window.addEventListener('click', function(e) {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
