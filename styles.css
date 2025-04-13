@@ -285,19 +285,6 @@ body.loaded {
   background-image: url('https://cdn-icons-png.flaticon.com/512/1828/1828970.png');
 }
 
-/* Dropdown animado */
-.dropdown-content {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-}
-.dropdown.open .dropdown-content {
-  display: flex;
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
 
 /* Destaque nos títulos */
 h2 {
@@ -528,66 +515,7 @@ main {
   border-radius: 2px;
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-  nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-  nav.show {
-    display: flex;
-  }
-}
 
-nav {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-}
-
-nav.show {
-  max-height: 500px; /* valor suficiente para exibir todos os itens */
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  margin-left: auto;
-  padding: 10px;
-}
-.hamburger div {
-  height: 3px;
-  width: 25px;
-  background: #003366;
-  margin: 4px 0;
-  border-radius: 2px;
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  nav {
-    max-height: 0;
-    overflow: hidden;
-    flex-direction: column;
-    width: 100%;
-    transition: max-height 0.4s ease;
-  }
-
-  nav.show {
-    max-height: 500px;
-  }
-
-  nav a {
-    padding: 12px;
-  }
-}
 
 .tema-central {
   background-color: #fff8dc;
