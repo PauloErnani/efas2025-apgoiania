@@ -269,21 +269,6 @@ body.loaded {
   background-repeat: no-repeat;
   vertical-align: middle;
 }
-.dropdown-content a[href*="sobre"]::before {
-  background-image: url('https://cdn-icons-png.flaticon.com/512/1828/1828490.png');
-}
-.dropdown-content a[href*="local"]::before {
-  background-image: url('https://cdn-icons-png.flaticon.com/512/684/684908.png');
-}
-.dropdown-content a[href*="criancas"]::before {
-  background-image: url('https://cdn-icons-png.flaticon.com/512/3081/3081648.png');
-}
-.dropdown-content a[href*="atuais"]::before {
-  background-image: url('https://cdn-icons-png.flaticon.com/512/3524/3524659.png');
-}
-.dropdown-content a[href*="especificos"]::before {
-  background-image: url('https://cdn-icons-png.flaticon.com/512/1828/1828970.png');
-}
 
 
 /* Destaque nos títulos */
