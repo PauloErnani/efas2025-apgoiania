@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,15 +8,102 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
+
 <body class="loaded">
   <header>
     <img src="logo.png" alt="Logo EFAS" class="logo" />
+  
+    <style>
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        margin-left: auto;
+      }
+  
+      .hamburger div {
+        height: 3px;
+        width: 25px;
+        background: #003366;
+        margin: 4px 0;
+        border-radius: 2px;
+      }
+  
+      @media (max-width: 768px) {
+        .hamburger {
+          display: flex;
+        }
+  
+        nav {
+          flex-direction: column;
+          align-items: flex-start;
+          display: none;
+          width: 100%;
+        }
+  
+        nav.show {
+          display: flex;
+        }
+  
+        .dropdown-content {
+          position: static; /* Muda para 'static' em telas pequenas */
+          width: 100%; /* Garante que o menu dropdown ocupe toda a largura */
+          padding: 10px 0;
+        }
+  
+        .dropdown-content a {
+          padding: 10px; /* Ajuste do espaçamento */
+          text-align: left; /* Alinhamento à esquerda para dispositivos móveis */
+        }
+      }
+  
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+  
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        padding: 10px 0;
+        border-radius: 4px;
+        width: auto;
+      }
+  
+      .dropdown-content a {
+        color: #003366;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+      }
+  
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+        color: #0056b3;
+      }
+  
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    </style>
+  
     <div class="hamburger" onclick="document.querySelector('nav').classList.toggle('show')">
-      <div></div><div></div><div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
+  
     <nav>
       <a href="index.html">Home</a>
+  
       <div class="dropdown">
         <span class="dropbtn">EFAS 2025 ▾</span>
         <div class="dropdown-content">
@@ -27,34 +114,154 @@
           <a href="efas-temas-especificos.html">Temas Específicos</a>
         </div>
       </div>
+  
       <a href="programacao.html">Programação</a>
       <a href="inscricao.html">Inscrição</a>
       <a href="contato.html">Contato</a>
     </nav>
   </header>
+  
+  
+  
+  
   <main>
 
-<section class="tema-central">
-  <h1>5687º Encontro Fraterno Auta de Souza</h1>
-  <h2>24 e 25 de Maio de 2025 - Aparecida de Goiânia</h2>
-  <p class="tema-frase">O MAIOR MANDAMENTO: "AMARÁS A DEUS DE TODA A TUA ALMA E TEU PRÓXIMO COMO A TI MESMO"</p>
-</section>
+    <section class="tema-central">
+      <h1>5687º Encontro Fraterno Auta de Souza</h1>
+      <h2>24 e 25 de Maio de 2025 - Aparecida de Goiânia</h2>
+      <p class="tema-frase">O MAIOR MANDAMENTO: "AMARÁS A DEUS DE TODA A TUA ALMA E TEU PRÓXIMO COMO A TI MESMO"</p>
+    </section>
 
 
 
     <section class="sobre-efas" data-aos="fade-up">
       <h2>O que é o EFAS?</h2>
-      <p>Encontro espírita que proporciona aos participantes a troca de experiências por meio do estudo da Doutrina Espírita e trabalho no campo do bem.</p>
+      <p>Encontro espírita que proporciona aos participantes a troca de experiências por meio do estudo da Doutrina
+        Espírita e trabalho no campo do bem.</p>
     </section>
-
+    <section class="sobre-efas" data-aos="fade-up">
+      <h2>EFAS 2023</h2>
+      <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <!-- Carregar imagens dinamicamente até 30 -->
+          <div class="carousel-item active">
+            <img src="image/2023/1.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/2.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/3.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <!-- Repita este bloco para as demais imagens -->
+          <!-- Exemplo de outras imagens: -->
+          <div class="carousel-item">
+            <img src="image/2023/4.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <!-- Adicione até 30 imagens -->
+          <div class="carousel-item">
+            <img src="image/2023/5.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/6.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/7.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/8.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/9.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/10.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/11.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/12.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/13.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/14.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/15.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/16.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/17.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/18.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/19.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/20.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/21.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/22.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/23.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/24.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/25.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/26.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/27.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/28.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/29.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/30.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/31.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+          <div class="carousel-item">
+            <img src="image/2023/32.jpg" class="d-block w-100" alt="..." style="object-fit: cover; width: 100%; height: 450px;">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+        </section>
     <section class="temas-blocos" data-aos="fade-up">
       <h2>Conheça os Temas</h2>
-      
-<div class="botoes-temas">
-  <a href="efas-temas-atuais.html" class="btn-tema-grande">Temas Atuais</a>
-  <a href="efas-temas-especificos.html" class="btn-tema-grande">Temas Específicos</a>
-</div>
-</div>
+
+      <div class="botoes-temas">
+        <a href="efas-temas-atuais.html" class="btn-tema-grande">Temas Atuais</a>
+        <a href="efas-temas-especificos.html" class="btn-tema-grande">Temas Específicos</a>
+      </div>
+      </div>
     </section>
   </main>
 
@@ -68,7 +275,7 @@
         e.preventDefault();
         dropdown.classList.toggle('open');
       });
-      window.addEventListener('click', function(e) {
+      window.addEventListener('click', function (e) {
         if (!dropdown.contains(e.target)) {
           dropdown.classList.remove('open');
         }
@@ -76,23 +283,28 @@
     });
   </script>
 
-<script>
+  <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const nav = document.querySelector('nav');
-    const hamburger = document.querySelector('.hamburger');
-    const links = nav.querySelectorAll('a');
+    const dropdownToggle = document.querySelector('.dropbtn');
+    const dropdown = document.querySelector('.dropdown');
 
-    hamburger.addEventListener('click', () => {
-      nav.classList.toggle('show');
+    dropdownToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      dropdown.classList.toggle('open');
     });
 
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('show');
-      });
+    // Fecha o menu ao clicar fora
+    window.addEventListener('click', function(e) {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
     });
   });
-</script>
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
 
 </body>
+
 </html>
